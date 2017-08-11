@@ -10,3 +10,5 @@ npm start
 
 
 URL : http://localhost
+
+Note: make sure this Endpoint is accessible: http://pb-api.herokuapp.com/bars, otherwise application will not work.

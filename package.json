@@ -4,11 +4,20 @@
   "author": "ved prakash maurya",
   "description": "Slider App: Vp Maurya",
   "dependencies": {
-	"body-parser": "^1.15.2",
+    "body-parser": "^1.15.2",
     "express": "^4.9.0",
-	"request": "^2.72.0"
-   },
+    "request": "^2.72.0"
+  },
   "engines": {
     "node": ">= 4.4.5"
+  },
+  "devDependencies": {
+    "angular": "^1.6.5",
+    "angular-mocks": "^1.6.5",
+    "angular-ui-router": "^1.0.3",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0"
   }
 }
