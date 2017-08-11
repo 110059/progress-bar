@@ -1,0 +1,14 @@
+{
+  "name": "SliderApp",
+  "version": "0.0.1",
+  "author": "ved prakash maurya",
+  "description": "Slider App: Vp Maurya",
+  "dependencies": {
+	"body-parser": "^1.15.2",
+    "express": "^4.9.0",
+	"request": "^2.72.0"
+   },
+  "engines": {
+    "node": ">= 4.4.5"
+  }
+}
