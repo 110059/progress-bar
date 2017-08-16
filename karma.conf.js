@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Fri Aug 11 2017 15:31:52 GMT+0800 (Malay Peninsula Standard Time)
+// Generated on Tue Aug 15 2017 16:22:39 GMT+0800 (Malay Peninsula Standard Time)
 
 module.exports = function(config) {
   config.set({
@@ -15,7 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-	   './public/services/bars/bars.spec.js'
+      'node_modules/angular/angular.js',
+      'node_modules/angular-mocks/angular-mocks.js',
+      'public/**/*.js',
+      'test/**/*.spec.js'
     ],
 
 
@@ -37,7 +40,7 @@ module.exports = function(config) {
 
 
     // web server port
-    port: 80,
+    port: 9876,
 
 
     // enable / disable colors in the output (reporters and logs)
@@ -55,7 +58,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

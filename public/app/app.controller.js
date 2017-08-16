@@ -1,18 +1,23 @@
-angular.module('myApp').controller('AppCtrl', function($scope, $http) { 
-    $scope.apiData = null; 
-	$scope.newProgressValues = [];
-    $http({
-		url: 'http://pb-api.herokuapp.com/bars',
-		method: 'GET',
-		dataType: 'json', 
-		headers: {}
-	}).success(function (data, status) {
-		$scope.apiData = data;
-		$scope.newProgressValues = data.bars;
+angular.module('myApp').factory('BarsService', function($http) {	
+	var myService = {
+    async: function() {
+      var promise = $http.get('http://pb-api.herokuapp.com/bars').then(function (response) {
+        console.log(response);
+        return response.data;
+      });
+      return promise;
+    }
+  };
+  return myService;
+	
+}).controller('AppCtrl', function($scope, BarsService) { 
+    $scope.newProgressValues = [];
+	BarsService.async().then(function(d) {
+		$scope.apiData = d;
+		$scope.newProgressValues = d.bars;
 	}); 
-
     $scope.changeProgress = function(changeVal) {         		
-         let newProgressValue = parseInt($scope.apiData.bars[$scope.selectedProgress]) + parseInt(changeVal);
+         var newProgressValue = parseInt($scope.apiData.bars[$scope.selectedProgress]) + parseInt(changeVal);
 		 newProgressValue = (newProgressValue < 0 ) ? 0 : newProgressValue;
 		 $scope.apiData.bars[$scope.selectedProgress] = $scope.newProgressValues[$scope.selectedProgress] = newProgressValue;
 	};

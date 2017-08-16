@@ -1,6 +1,6 @@
 "# vp_slider" 
 
-Responsive Slider Using Javascript, Angular.JS, Node.JS, Bootstrap, HTML5, CSS3
+Responsive Slider Using Javascript, Angular.JS, Node.JS, Bootstrap, HTML5, CSS3, Jasmine, Karma
 
 Go to root folder 
 
