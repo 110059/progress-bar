@@ -1,8 +1,12 @@
 "# vp_slider" 
 
-Responsive Slider Using Javascript, Angular.JS, Node.JS, Bootstrap, HTML5, CSS3, Jasmine, Karma
+Responsive Slider Using Javascript, Angular.JS, Node.JS, Gulp, Jasmine, Karma, Bootstrap, HTML5, CSS3 
 
-Go to root folder 
+Clone / Download the project and Go to root folder 
+
+gulp
+
+karma start
 
 npm install
 
