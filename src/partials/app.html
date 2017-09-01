@@ -1,20 +1,19 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="AppCtrl">
     <div class="container" ng-repeat="bar in apiData.bars track by $index">
 		<div class="progress">
-		  <div ng-class="(newProgressValues[$index] < apiData.limit) ? 'progress-bar' : 'progress-bar progress-bar-danger'" 
-		  role="progressbar" aria-valuenow="{{bar}}" aria-valuemin="0" aria-valuemax="100" 
+		  <div ng-class="(newProgressValues[$index] < apiData.limit) ? 'progress-bar' : 'progress-bar progress-bar-danger'"
+		  role="progressbar" aria-valuenow="{{bar}}" aria-valuemin="0" aria-valuemax="100"
 		  style="width:{{bar}}%">
 			{{bar}}%
 		  </div>
 		</div>
-    </div>		
-	<div>	  
+    </div>
+	<div>
 		<select ng-init="selectedProgress = 0" ng-model="selectedProgress">
 		  <option ng-repeat="prg in apiData.bars track by $index" value="{{$index}}">#Progress{{$index+1}}</option>
-		</select>	
+		</select>
 		<span ng-repeat="btnNum in apiData.buttons track by $index">
            <button type="button" value={{btnNum}} ng-click="changeProgress(btnNum)" class="btn btn-default btn-md">{{btnNum}}</button>
-        </span>		
-	</div>	
+        </span>
+	</div>
 </div>
-

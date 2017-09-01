@@ -1,4 +1,4 @@
-sliderApp = angular.module("sliderApp");
+var sliderApp = angular.module("sliderApp");
 sliderApp.factory('BarsService', function($http) {
   var myService = {
     async: function() {
